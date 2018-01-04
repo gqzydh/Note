@@ -7,11 +7,16 @@ categories:
 - css
 ---
 
+1. animates.css
+2. 
+
 ## css3常用动画库
 
 - [animates.css](https://daneden.github.io/animate.css/):https://daneden.github.io/animate.css/
 > animate.css是一款CSS3的动画效果小类库。包含了60多款不同类型的CSS3动画，包括：晃动，闪动，各种淡出淡出效果，如果你想快速的整合各种CSS3动画特效的话，使用它即可方便的实现。
 
+- [vivify.css](http://vivify.mkcreative.cz):http://vivify.mkcreative.cz 
+> Vivify.css是一个带68种动画效果的CSS3动画库。vivify.css动画库和Animate.css类似,为网页元素提供各种CSS3动画效果。
 
 
 
