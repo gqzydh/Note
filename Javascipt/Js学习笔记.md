@@ -9,7 +9,19 @@ categories:
 - Javascript
 ---
 
+1. 数组
+2. 条件判断
 
+
+## 数组方法 ##
+`split()` //方法用于把一个字符串分割成字符串数组.
+`join()`  //方法用于把数组中的所有元素放入一个字符串。
+String.split() 执行的操作与 Array.join 执行的操作是相反的。
+```
+var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+var myArray = myData.split(',');
+var myNewString = myArray.join(',');
+```
 ## 输出数组里指定的
 ```
 var arr1 = [[1, 4, 3], [4, 6, 6], [7, 20, 9]]     
@@ -18,6 +30,8 @@ $.each(arr1, function(i, item){
 });  
 ```
 ## push()函数追加数组数据
+要在数组末尾添加或删除一个项目，我们可以使用push()和pop()。
+unshift()和shift()以完全相同的方式工作，只是它们在数组的开始处尾添加或删除一个项目;
 ```
 var arr = [1,2,3];
 arr.push(4);
@@ -43,3 +57,10 @@ random()生成随机小数
  ```
  Math.floor(Math.random() * (max - min + 1)) + min //生成的随机数是在两个指定的数之间。
  ```
+
+## 条件判断 ##
+`===` and` !== ` — 判断一个值是否严格等于，或不等于另一个。
+` ! `  运算符表示, 可以用于对一个表达式取否.
+` && ` — 逻辑与; 使得并列两个或者更多的表达式成为可能，只有当这些表达式每一个都返回true时，整个表达式才会返回true.
+`||` — 逻辑或; 当两个或者更多表达式当中的任何一个返回 true 则整个表达式将会返回 true.
+
