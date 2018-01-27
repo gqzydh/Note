@@ -8,7 +8,12 @@ categories:
 - JQuery
 ---
 
+1. 添加,删除样式
+2. ios,android,micromessenger 判断
+3. 
 
+
+## 添加删除样式
 ```
 addClass()  //方法给元素加class
 removeClass()  //方法删除元素的class。
@@ -37,4 +42,30 @@ $("h3").html("<em>jQuery Playground</em>");  //在元素中添加HTML标签和�
 
  $("#left-well").parent().css("background-color", "blue")  //可以允许你访问选定元素的父元素。并从中继承属性。
  children(子元素)， //子元素从父元素那里继承属性。
+```
+
+## ios,android,micromessenger 判断
+```
+if(navigator.userAgent.toLowerCase() === 'iosclient'||navigator.userAgent.toLowerCase() === 'androidclient'){
+    this.showHeader=false;
+}  // 判断
+
+var ua = window.navigator.userAgent.toLowerCase(); 
+$("#clickDown").click(function(e){
+    if(navigator.userAgent.toLowerCase() === 'iosclient'){
+        e.stopPropagation(); //该方法将停止事件的传播，阻止它被分派到其他 Document 节点。
+        e.preventDefault();  //取消事件的默认动作。
+        $(".alertMsgsa").delay(5000).hide(0);  //延迟5秒执行
+
+    }else if(navigator.userAgent.toLowerCase() === 'androidclient'){
+        e.stopPropagation();
+        e.preventDefault();
+
+    }else if(ua.match(/MicroMessenger/i)=="micromessenger"){
+         window.location= "https://w.url.cn/s/A5LsZ3k#wechat_redirect";  //微信中打开
+    }else{
+        e.stopPropagation();
+        e.preventDefault();
+    }
+});
 ```

@@ -9,6 +9,8 @@ categories:
 - Javascript
 ---
 
+1. 使用navigator.userAgent.toLowerCase()判断浏览器类型
+2. 区分各个浏览器
 
 ## 计时方法：
 ```
@@ -37,3 +39,50 @@ screen  对象包含有关用户屏幕的信息
     screen.height    屏幕高度
     screen.width      屏幕宽度
 ```
+
+## 使用navigator.userAgent.toLowerCase()判断浏览器类型
+在跨平台，不同浏览器，移动设备兼容的时候，经常要判断浏览器类型，设备进行区分
+有 ios, android, micromessenger(微信), iphone, ipad, pc浏览器
+
+```
+var ua = window.navigator.userAgent.toLowerCase(); 
+if(navigator.userAgent.toLowerCase() === 'iosclient'){
+    console.log("ios")
+}else if(navigator.userAgent.toLowerCase() === 'androidclient'){
+    console.log("android")
+}else if(ua.match(/MicroMessenger/i)=="micromessenger"){
+    console.log("微信")
+}else if(ua.match(/iPhone/i)) == "iPhone"){  
+    alert("iPhone");  
+}else if(ua.match(/iPad/i)) == "iPad"){  
+    alert("iPad");  
+}    
+```
+
+## 区分各个浏览器
+```
+var ua=navigator.userAgent.toLowerCase();    
+if(/msie/i.test(ua) && !/opera/.test(ua)){    
+    alert("IE");    
+    return ;    
+}else if(/firefox/i.test(ua)){    
+    alert("Firefox");    
+    return ;    
+}else if(/chrome/i.test(ua) && /webkit/i.test(ua) && /mozilla/i.test(ua)){    
+    alert("Chrome");    
+    return ;    
+}else if(/opera/i.test(ua)){    
+    alert("Opera");    
+    return ;    
+}else if(/iPad/i){   
+    alert("ipad");   
+    return ;   
+}  
+ if(/webkit/i.test(ua) &&!(/chrome/i.test(ua) && /webkit/i.test(ua) && /mozilla/i.test(ua))){    
+    alert("Safari");    
+    return ;    
+}else{    
+    alert("unKnow");    
+}    
+```
+
